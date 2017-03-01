@@ -1,0 +1,8 @@
+service firebase.storage {
+  match /b/tlate-700d0.appspot.com/o {
+    match /{userId}/{spaceId}/{fileName} {
+      allow write: if request.auth.uid == userId;
+      allow read;
+    }
+  }
+}
