@@ -5,11 +5,8 @@ import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import './App.css';
-import './styles/fonts/index.css';
-import logo from './logo.svg';
-
-// Load site name from package.json
-const siteName = require('../package.json').name;
+import './../assets/styles/fonts/index.css';
+import logo from './../assets/img/logo.svg';
 
 injectTapEventPlugin();
 
@@ -23,7 +20,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div>
-          <AppBar title={siteName}>
+          <AppBar title="ⓣ Late">
             {this.renderLogo()}
           </AppBar>
           <div style={{ marginTop: '1em', marginBottom: '1em', marginRight: '1em', marginLeft: '1em' }}>
