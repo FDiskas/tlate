@@ -2,6 +2,15 @@ language: node_js
 node_js:
   - '6'
 
+cache:
+  yarn: true
+  directories:
+    - "$HOME/.npm"
+    - "$HOME/.yarn-cache"
+
+before_deploy:
+  - yarn run build
+
 deploy:
   provider: firebase
   project: tlate-700d0
