@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/FDiskas/tlate.png?label=ready&title=Ready)](https://waffle.io/FDiskas/tlate)
 # Used tools
 1. [React](https://facebook.github.io/react)
 1. [Create react app](https://github.com/facebookincubator/create-react-app)
