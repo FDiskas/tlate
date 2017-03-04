@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App';
 import './index.css';
+import './assets/styles/fonts/index.css';
+import './assets/styles/icon-font/material-icons.css';
 
 import firebase from 'firebase/app';
 import "firebase/auth";

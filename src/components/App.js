@@ -3,9 +3,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
+import FontIcon from 'material-ui/FontIcon';
 
 import './App.css';
-import './../assets/styles/fonts/index.css';
 import logo from './../assets/img/logo.svg';
 
 injectTapEventPlugin();
@@ -27,6 +27,7 @@ class App extends Component {
             <RaisedButton
               href="http://www.material-ui.com/"
               label="Read the Material UI docs"
+              icon={<FontIcon className="material-icons">home</FontIcon>}
               fullWidth
               secondary
             />
