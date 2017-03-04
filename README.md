@@ -4,4 +4,5 @@
 1. [Travis](https://travis-ci.org)
 1. [Firebase](https://firebase.google.com)
 1. [Material-UI](http://www.material-ui.com)
+1. [Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont)
 1. [yarn](https://yarnpkg.com)
