@@ -166,9 +166,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
 
-### `npm run deploy`
+### Deploy
 
-Deploy current state of `build` directory to production.
+We are using Travis for CI. To deploy a new release first you should merge changes to master branch, then 
+run `npm version` or `yarn version` and make a new release in package.json, then push all tags to git.
 
 Your app is ready!
 
