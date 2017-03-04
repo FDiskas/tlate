@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import Header from './header/Header';
+
 import './App.css';
-import './../assets/styles/fonts/index.css';
-import logo from './../assets/img/logo.svg';
 
 injectTapEventPlugin();
 
 class App extends Component {
-
-  renderLogo() {
-    return <img src={logo} className="App-logo" alt="logo"/>;
-  }
-
   render() {
     return (
       <MuiThemeProvider>
         <div>
-          <AppBar title="ⓣ Late">
-            {this.renderLogo()}
-          </AppBar>
+          <Header />
           <div style={{ marginTop: '1em', marginBottom: '1em', marginRight: '1em', marginLeft: '1em' }}>
             <RaisedButton
               href="http://www.material-ui.com/"
