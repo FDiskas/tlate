@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppBar from 'material-ui/AppBar';
+import {AppBar} from 'material-ui';
 
 import UserMenu from '../user/UserMenu';
 import UserLogin from '../user/UserLogin';

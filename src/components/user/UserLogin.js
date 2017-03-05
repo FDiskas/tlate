@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import FlatButton from 'material-ui/FlatButton';
+import {FlatButton} from "material-ui";
 
 class UserLogin extends Component {
   render() {

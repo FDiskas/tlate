@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import FontIcon from 'material-ui/FontIcon';
-
-import Header from './header/Header';
+import {FontIcon, MuiThemeProvider, RaisedButton} from 'material-ui';
 
 import './App.css';
+import Header from './header/Header';
 
 injectTapEventPlugin();
 
