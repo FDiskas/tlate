@@ -19,15 +19,15 @@ class Header extends Component {
       logged: true,
     };
 
-    this.handleLogout = this.handleLogout.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
+    this._handleLogout = this._handleLogout.bind(this);
+    this._handleLogin = this._handleLogin.bind(this);
   }
 
-  handleLogout(event) {
+  _handleLogout(event) {
     this.setState({logged: false});
   };
 
-  handleLogin(event) {
+  _handleLogin(event) {
     this.setState({logged: true});
   };
 
@@ -46,10 +46,10 @@ class Header extends Component {
             >
               <MenuItem primaryText="Refresh" />
               <MenuItem primaryText="Help" />
-              <MenuItem primaryText="Sign out" onTouchTap={this.handleLogout} />
+              <MenuItem primaryText="Sign out" onClick={this._handleLogout} />
             </IconMenu>
           :
-            <FlatButton label="Login" onTouchTap={this.handleLogin} />
+            <FlatButton label="Login" onClick={this._handleLogin} />
         }
       >
       </AppBar>
