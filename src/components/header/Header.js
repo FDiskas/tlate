@@ -15,13 +15,13 @@ class Header extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      logged: true,
+    };
+
     this.handleLogout = this.handleLogout.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
   }
-
-  state = {
-    logged: true,
-  };
 
   handleLogout(event) {
     this.setState({logged: false});
