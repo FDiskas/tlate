@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {AppBar} from 'material-ui';
-
-import UserMenu from '../user/UserMenu';
-import UserLogin from '../user/UserLogin';
+import {AppBar, FlatButton, IconButton, IconMenu, MenuItem} from 'material-ui';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
 import logo from './../../assets/img/logo.svg';
 
@@ -37,7 +35,22 @@ class Header extends Component {
     return (
       <AppBar
         title={<Logo/>}
-        iconElementRight={this.state.logged ? <UserMenu handleLogout={this.handleLogout} /> : <UserLogin handleLogin={this.handleLogin} />}
+        iconElementRight={
+          this.state.logged ?
+            <IconMenu
+              iconButtonElement={
+                <IconButton><MoreVertIcon /></IconButton>
+              }
+              targetOrigin={{horizontal: 'right', vertical: 'top'}}
+              anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+            >
+              <MenuItem primaryText="Refresh" />
+              <MenuItem primaryText="Help" />
+              <MenuItem primaryText="Sign out" onTouchTap={this.handleLogout} />
+            </IconMenu>
+          :
+            <FlatButton label="Login" onTouchTap={this.handleLogin} />
+        }
       >
       </AppBar>
     );
