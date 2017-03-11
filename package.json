@@ -5,10 +5,10 @@
   "description": "It's never to late - keep all your notes and memory in privately one place",
   "dependencies": {
     "firebase": "^3.6.10",
-    "material-ui": "^0.17.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-tap-event-plugin": "^2.0.1",
+    "react-toolbox": "^2.0.0-beta.7"
   },
   "devDependencies": {
     "enzyme": "^2.7.1",
