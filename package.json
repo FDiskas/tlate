@@ -3,24 +3,28 @@
   "version": "0.0.2",
   "private": true,
   "description": "It's never to late - keep all your notes and memory in privately one place",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "toolbox": "react-toolbox-themr"
+  },
   "dependencies": {
     "firebase": "^3.6.10",
+    "material-design-icons": "^3.0.1",
     "react": "15.4.2",
+    "react-css-themr": "^2.0.0",
     "react-dom": "15.4.2",
     "react-tap-event-plugin": "^2.0.1",
-    "react-toolbox": "^2.0.0-beta.7"
+    "react-toolbox": "https://github.com/FDiskas/react-toolbox.git#patch-1"
   },
   "devDependencies": {
     "enzyme": "^2.7.1",
     "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.9.3",
-    "react-test-renderer": "^15.4.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "coverage": "react-scripts test --env=jsdom --coverage"
+    "react-test-renderer": "^15.4.2",
+    "react-toolbox-themr": "^1.0.2"
   },
   "jest": {
     "colectCoverageFrom": [
