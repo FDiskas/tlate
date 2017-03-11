@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AppBar, FlatButton, IconButton, IconMenu, MenuItem} from 'material-ui';
+import {AppBar, Avatar, FlatButton, IconButton, IconMenu, MenuItem} from 'material-ui';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
 import logo from './../../assets/img/logo.svg';
@@ -16,7 +16,7 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      logged: true,
+      logged: false,
     };
 
     this._handleLogout = this._handleLogout.bind(this);
@@ -49,7 +49,7 @@ class Header extends Component {
               <MenuItem primaryText="Sign out" onClick={this._handleLogout} />
             </IconMenu>
           :
-            <FlatButton label="Login" onClick={this._handleLogin} />
+            <FlatButton label="Login" id="ts-login-btn" onClick={this._handleLogin} />
         }
       >
       </AppBar>
