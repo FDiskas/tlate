@@ -8,6 +8,7 @@
 1. [Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) UI Icons
 1. [yarn](https://yarnpkg.com) Package manager
 1. [jest](https://facebook.github.io/jest/) For tests
+1. [ReactJS Live templates for JetBrains](https://github.com/geochatz/phpstorm-reactjs) Create new file and type `rcls` then press `TAB`
 
 ## TODO
 1. [ ] Check a [pull request](https://github.com/react-toolbox/react-toolbox/pull/1321)

@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 
-import logo from './../../assets/img/logo.svg';
-
 import AppBar from 'react-toolbox/lib/app_bar/AppBar';
-// import Button from 'react-toolbox/lib/button/Button';
 import IconMenu from 'react-toolbox/lib/menu/IconMenu';
-// import IconButton from 'react-toolbox/lib/button/IconButton';
 import MenuItem from 'react-toolbox/lib/menu/MenuItem';
 import MenuDivider from 'react-toolbox/lib/menu/MenuDivider';
 import Navigation from 'react-toolbox/lib/navigation/Navigation';
 
-// const Logo = <img src={logo} className="App-logo" alt="logo"/>;
+import logo from './../../assets/img/logo.svg';
+
 const Logo = () => (
   <span>
     <img src={logo} className="App-logo" alt="logo"/> Late

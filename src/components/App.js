@@ -8,30 +8,29 @@ import Layout from 'react-toolbox/lib/layout/Layout';
 import NavDrawer from 'react-toolbox/lib/layout/NavDrawer';
 import Panel from 'react-toolbox/lib/layout/Panel';
 import Sidebar from 'react-toolbox/lib/layout/Sidebar';
-import Navigation from 'react-toolbox/lib/navigation/Navigation';
-import Link from 'react-toolbox/lib/link/Link';
 import Checkbox from 'react-toolbox/lib/checkbox/Checkbox';
 
 import Header from './header/Header';
+import MainMenu from './menu/MainMenu';
 
 class App extends Component {
 
   state = {
-    drawerActive: false,
-    drawerPinned: false,
-    sidebarPinned: false
+    mainMenuActive: false,
+    mainMenuPinned: false,
+    activitySideBarPinned: false
   };
 
   toggleDrawerActive = () => {
-    this.setState({ drawerActive: !this.state.drawerActive });
+    this.setState({ mainMenuActive: !this.state.mainMenuActive });
   };
 
-  toggleDrawerPinned = () => {
-    this.setState({ drawerPinned: !this.state.drawerPinned });
+  toggleMainMenuPinned = () => {
+    this.setState({ mainMenuPinned: !this.state.mainMenuPinned });
   };
 
-  toggleSidebar = () => {
-    this.setState({ sidebarPinned: !this.state.sidebarPinned });
+  toggleActivitySidebar = () => {
+    this.setState({ activitySideBarPinned: !this.state.activitySideBarPinned });
   };
 
   render() {
@@ -39,33 +38,27 @@ class App extends Component {
       <Layout>
         <NavDrawer
           className="App-left-menu"
-          active={this.state.drawerActive}
-          pinned={this.state.drawerPinned}
-          permanentAt='xxxl'
+          active={this.state.mainMenuActive}
+          pinned={this.state.mainMenuPinned}
+          permanentAt="xxxl"
           onOverlayClick={ this.toggleDrawerActive }
         >
-          <p>
-            Navigation, account switcher, etc. go here.
-            <Navigation type='vertical'>
-              <Link href='http://' label='Inbox' icon='inbox' />
-              <Link href='http://' active label='Profile' icon='person' />
-            </Navigation>
-          </p>
+          <MainMenu onLeftIconClick={ this.toggleDrawerActive } />
         </NavDrawer>
         <Panel>
-          <Header leftIcon='menu' onLeftIconClick={ this.toggleDrawerActive } />
+          <Header leftIcon="menu" onLeftIconClick={ this.toggleDrawerActive } />
           <div style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
             <h1>Main Content</h1>
             <p>Main content goes here.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur itaque nisi non quas saepe vel
               voluptatem. Autem dignissimos eos itaque nam rerum. Aperiam blanditiis ducimus nesciunt reiciendis sequi,
               ullam voluptas?</p>
-            <Checkbox label='Pin drawer' checked={this.state.drawerPinned} onChange={this.toggleDrawerPinned} />
-            <Checkbox label='Show sidebar' checked={this.state.sidebarPinned} onChange={this.toggleSidebar} />
+            <Checkbox label="Pin Main Menu" checked={this.state.mainMenuPinned} onChange={this.toggleMainMenuPinned} />
+            <Checkbox label="Show activity sidebar" checked={this.state.activitySideBarPinned} onChange={this.toggleActivitySidebar} />
           </div>
         </Panel>
-        <Sidebar pinned={ this.state.sidebarPinned } width={ 5 }>
-          <div><IconButton icon='close' onClick={ this.toggleSidebar }/></div>
+        <Sidebar pinned={ this.state.activitySideBarPinned } width={ 5 }>
+          <div><IconButton icon="close" onClick={ this.toggleActivitySidebar }/></div>
           <div style={{ flex: 1 }}>
             <p>Supplemental content goes here.</p>
           </div>
