@@ -12,6 +12,7 @@ import Checkbox from 'react-toolbox/lib/checkbox/Checkbox';
 
 import Header from './header/Header';
 import MainMenu from './menu/MainMenu';
+import Notification from './notification/Notification';
 
 class App extends Component {
 
@@ -45,7 +46,7 @@ class App extends Component {
         >
           <MainMenu onLeftIconClick={ this.toggleDrawerActive } />
         </NavDrawer>
-        <Panel>
+        <Panel style={{paddingTop: '32px'}} >
           <Header leftIcon="menu" onLeftIconClick={ this.toggleDrawerActive } />
           <div style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
             <h1>Main Content</h1>
@@ -63,6 +64,7 @@ class App extends Component {
             <p>Supplemental content goes here.</p>
           </div>
         </Sidebar>
+        <Notification {...this.props} />
       </Layout>
     );
   }
