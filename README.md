@@ -1,4 +1,4 @@
-# Used tools
+# Used tools [![Stories in Ready](https://badge.waffle.io/FDiskas/tlate.png?label=ready&title=Ready)](https://waffle.io/FDiskas/tlate) [![Build Status](https://travis-ci.org/FDiskas/tlate.svg?branch=master)](https://travis-ci.org/FDiskas/tlate)
 1. [React](https://facebook.github.io/react) SPA Framework (Single Page Application)
 1. [Create react app](https://github.com/facebookincubator/create-react-app) Environment
 1. [Travis](https://travis-ci.org) Auto deployment
