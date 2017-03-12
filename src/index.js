@@ -14,7 +14,8 @@ import firebase from 'firebase/app';
 import "firebase/auth";
 import "firebase/database";
 import "firebase/messaging";
-import Provider from 'react-redux/src/components/Provider';
+import { Provider } from 'react-redux';
+import Store from './store';
 
 const config = {
   apiKey: "AIzaSyChVwFp6hJ8YTDd-7WT52ct-F7nfAJtFS4",
@@ -30,7 +31,7 @@ firebase.initializeApp(config);
 window.firebase = firebase;
 
 ReactDOM.render(
-  <Provider store="">
+  <Provider store={Store} >
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
