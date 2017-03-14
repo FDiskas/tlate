@@ -7,7 +7,6 @@ import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 
 import App from './components/App';
 import './assets/styles/index.css';
-import './assets/styles/fonts/index.css';
 import '../node_modules/material-design-icons/iconfont/material-icons.css';
 
 import firebase from 'firebase/app';
