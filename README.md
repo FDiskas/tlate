@@ -13,8 +13,3 @@
 ## TODO
 1. [ ] Check a [pull request](https://github.com/react-toolbox/react-toolbox/pull/1321)
 1. [x] Material icons [issue](https://github.com/react-toolbox/react-toolbox/issues/1320)
-
-### After `yarn install`
-1. go to `node_modules/react-toolbox`
-1. in that directory run `yarn`
-> Temporary until pull request will be merged or suggested other fix
