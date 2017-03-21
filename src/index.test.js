@@ -16,16 +16,23 @@ import Store from './store';
 
 import { config as fireBaseConf } from './constants/FireBase';
 
-firebase.initializeApp(fireBaseConf);
 
-// TODO: do we need set this to global?
-window.firebase = firebase;
+describe('index.js', () => {
+  it('renders without crashing', () => {
 
-ReactDOM.render(
-  <Provider store={Store} >
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </Provider>,
-  document.getElementById('root')
-);
+    firebase.initializeApp(fireBaseConf);
+
+    ReactDOM.render(
+      <Provider store={Store} >
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </Provider>,
+      document.createElement('div')
+    );
+  });
+
+  it('firebase SDK version should be 3.7.1', () => {
+    expect(firebase.SDK_VERSION).toBe('3.7.1');
+  });
+});
