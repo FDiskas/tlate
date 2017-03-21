@@ -11,7 +11,7 @@ export default function notification(state = {}, action) {
       });
 
     default:
-      console.log('notification reducer :: hit default', action.type);
+      // console.log('notification reducer :: hit default', action.type);
       return state;
   }
 }

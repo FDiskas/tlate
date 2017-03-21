@@ -1,26 +1,20 @@
 import React from 'react';
-import Header from './Header';
-import renderer from 'react-test-renderer';
+import ReactTestUtils from 'react-addons-test-utils';
 
 import theme from './../../toolbox/theme';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+import Header from './Header';
 
-// Needed for onTouchTap
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
-import * as firebase from "firebase";
-import { config as fireBaseConf } from './../../constants/FireBase';
-
-firebase.initializeApp(fireBaseConf);
-
+// TODO: check if it's working correctly. First version should work. check history
 it('Check Header snapshot', () => {
-  const header = renderer.create(
-    <ThemeProvider theme={theme}>
-      <Header leftIcon="menu" />
-    </ThemeProvider>
-  ).toJSON();
 
-  expect(header).toMatchSnapshot();
+  const renderer = ReactTestUtils.createRenderer();
+  renderer.render(
+      <ThemeProvider theme={theme}>
+        <Header leftIcon="menu" />
+      </ThemeProvider>
+  );
+  const result = renderer.getRenderOutput();
 
+  expect(result.type).toBe(Header);
 });

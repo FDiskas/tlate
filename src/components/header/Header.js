@@ -13,8 +13,6 @@ const Logo = () => (
 );
 
 class Header extends Component {
-
-
   render() {
     return (
       <AppBar accent className="App-header" scrollHide={true} fixed={true} title={<Logo/>} leftIcon="menu" onLeftIconClick={this.props.onLeftIconClick}>
@@ -24,7 +22,6 @@ class Header extends Component {
       </AppBar>
     );
   }
-
 }
 
 export default Header;
