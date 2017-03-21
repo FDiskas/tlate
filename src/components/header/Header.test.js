@@ -1,22 +1,20 @@
-import {MuiThemeProvider} from 'material-ui';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
 import React from 'react';
+import ReactTestUtils from 'react-addons-test-utils';
+
+import theme from './../../toolbox/theme';
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import Header from './Header';
-import renderer from 'react-test-renderer';
 
-// Needed for onTouchTap
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
+// TODO: check if it's working correctly. First version should work. check history
 it('Check Header snapshot', () => {
-  const header = renderer.create(
-    <MuiThemeProvider>
-      <Header muiTheme={getMuiTheme(darkBaseTheme)} />
-    </MuiThemeProvider>
-  ).toJSON();
 
-  expect(header).toMatchSnapshot();
+  const renderer = ReactTestUtils.createRenderer();
+  renderer.render(
+      <ThemeProvider theme={theme}>
+        <Header leftIcon="menu" />
+      </ThemeProvider>
+  );
+  const result = renderer.getRenderOutput();
 
+  expect(result.type).toBe(Header);
 });
