@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import firebase from 'firebase';
 
 import IconMenu from 'react-toolbox/lib/menu/IconMenu';
@@ -6,7 +6,6 @@ import MenuItem from 'react-toolbox/lib/menu/MenuItem';
 import MenuDivider from 'react-toolbox/lib/menu/MenuDivider';
 import Dialog from 'react-toolbox/lib/dialog/Dialog';
 import Input from 'react-toolbox/lib/input/Input';
-import {addNotification} from '../../actions/notificationActions';
 
 class UserMenu extends Component {
 
