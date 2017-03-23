@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import firebase from 'firebase';
 
 import IconMenu from 'react-toolbox/lib/menu/IconMenu';
@@ -6,6 +6,7 @@ import MenuItem from 'react-toolbox/lib/menu/MenuItem';
 import MenuDivider from 'react-toolbox/lib/menu/MenuDivider';
 import Dialog from 'react-toolbox/lib/dialog/Dialog';
 import Input from 'react-toolbox/lib/input/Input';
+// import {addNotification} from '../../actions/notificationActions';
 
 class UserMenu extends Component {
 
@@ -33,16 +34,16 @@ class UserMenu extends Component {
 
   componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
-      this.setState({user});
+      this.setState({ user });
       if (user) {
         // dispatch(addNotification('happy days', 'success'));
-        this.setState({logged: true });
+        this.setState({ logged: true });
       }
     });
   }
 
   _handleLogout(event) {
-    this.setState({logged: false});
+    this.setState({ logged: false });
     firebase.auth().signOut().then(data => {
       console.log('Signed Out', data);
     }, error => {
@@ -56,7 +57,7 @@ class UserMenu extends Component {
       this.state.password
     ).then(data => {
       console.log('Signed In', data);
-      this.setState({logged: true});
+      this.setState({ logged: true });
       this.toggleLoginForm();
     }, error => {
       console.error('Sign In Error', error);
@@ -74,33 +75,35 @@ class UserMenu extends Component {
     });
 
     /*firebase.auth().(
-      this.state.email,
-      this.state.password
-    ).then(data => {
-      console.log('Signed In', data);
-      this.setState({logged: true});
-      this.toggleLoginForm();
-    }, error => {
-      console.error('Sign In Error', error);
-    });*/
+     this.state.email,
+     this.state.password
+     ).then(data => {
+     console.log('Signed In', data);
+     this.setState({logged: true});
+     this.toggleLoginForm();
+     }, error => {
+     console.error('Sign In Error', error);
+     });*/
   };
 
   toggleLoginForm() {
-    this.setState({loginFormActive: !this.state.loginFormActive});
+    this.setState({ loginFormActive: !this.state.loginFormActive });
     alert('Want a login form');
   }
 
   renderLoginForm() {
     return (
       <section>
-        <Input type="email" label="Email address" icon="email" value={this.state.email} onChange={this.handleFormChange.bind(this, "email")} />
-        <Input type="password" label="Password" name="password" icon="vpn_key" value={this.state.password} onChange={this.handleFormChange.bind(this, "password")} />
+        <Input type="email" label="Email address" icon="email" value={this.state.email}
+               onChange={this.handleFormChange.bind(this, "email")}/>
+        <Input type="password" label="Password" name="password" icon="vpn_key" value={this.state.password}
+               onChange={this.handleFormChange.bind(this, "password")}/>
       </section>
     )
   }
 
   handleFormChange = (name, value) => {
-    this.setState({...this.state, [name]: value});
+    this.setState({ ...this.state, [name]: value });
   };
 
   handleSelect = (value) => {
@@ -108,7 +111,7 @@ class UserMenu extends Component {
     this.setState({ selected: value });
 
     if (value === 'signin') {
-      this.setState({ loginFormActive: true});
+      this.setState({ loginFormActive: true });
     }
 
     if (value === 'signout') {
@@ -128,11 +131,11 @@ class UserMenu extends Component {
         selectable
         selected={this.state.selected}
       >
-        <MenuItem value="refresh" caption="Refresh" icon="refresh" />
-        <MenuItem value="help" caption="Help & Feedback" icon="help" />
-        <MenuItem value="settings" caption="Settings" icon="settings" />
+        <MenuItem value="refresh" caption="Refresh" icon="refresh"/>
+        <MenuItem value="help" caption="Help & Feedback" icon="help"/>
+        <MenuItem value="settings" caption="Settings" icon="settings"/>
         <MenuDivider />
-        <MenuItem value="signout" caption="Sign Out" icon="power_settings_new" />
+        <MenuItem value="signout" caption="Sign Out" icon="power_settings_new"/>
       </IconMenu>
     );
   }
@@ -150,9 +153,9 @@ class UserMenu extends Component {
         selectable
         selected={this.state.selected}
       >
-        <MenuItem value="help" caption="Help & Feedback" icon="help" />
+        <MenuItem value="help" caption="Help & Feedback" icon="help"/>
         <MenuDivider />
-        <MenuItem value="signin" caption="Sign In" icon="power_settings_new" />
+        <MenuItem value="signin" caption="Sign In" icon="power_settings_new"/>
         <Dialog
           actions={this.actions}
           active={this.state.loginFormActive}

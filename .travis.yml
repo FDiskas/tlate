@@ -15,7 +15,6 @@ deploy:
   provider: firebase
   project: tlate-700d0
   on:
-    tags: true
     branch: master
   token:
     secure: Cqbh8piKJSojeNdRr+QmnME/kvCuYU8a3LIj4NIV4/aIl45Zym0LcXekE4EcctIsaGz+93U+kbjLvcQQ0WvEkCGzor8LAE7cOGfW5tMs9K0tccSDkgpH78hRYyuK+ZeGCU9iD0bY2LgBC5qTPebGMryPI6wYPVL/a4vLga6FntZYZ5G91JgTBdIzCFZpcz08QMgzFMI5/gkvdw4UZoLJzmuSARQHcif6P13jTa2alp7zah6IVYCI7JrKYEtwYbllWSK/HAKyKKeHcCXEOT+wk9hxHnNMujLJlN8ee45p1ol/eb2ilBxj4Q55AT1rp7vkkdHvVUm5UG+YlxxEXtkvv+QmdtPUgKTbcTbYwPm7f5BSYMnckHP8JNuNuWN9U/GIrx/5Fd558u73HLF26+RV1ZvBJYiSV/a2kndvki2e0a7hoXFoNgnB9Gm5LsY0edHHf/fZDFdtfwvsmL3xv746uObnG+jaGP5Sl0UmCEYWy3RCOyQC0p0sGuCXs2SQpitGmV4fU7uS5CsW38wnLdRS2Xevu4zGT9p9PeIgKT+sZX21QpBALKndGzJA15v3y6fEqNSbfT5DNX9f/V3GSUzyC1V1DJzoHmFhrr3VWVYwkHds+SGYeNz4oKT636Q7c/OBxz3fVRxoKr9UBUEL1WpZXdFkDBF/ZIIyTIH6VwtffQ0=
