@@ -2,13 +2,11 @@ language: node_js
 node_js:
   - '6'
 
-cache:
-  yarn: true
-
 before_deploy:
-  - yarn run build
+  - yarn build
 
 deploy:
+  skip_cleanup: true
   provider: firebase
   project: tlate-700d0
   on:
