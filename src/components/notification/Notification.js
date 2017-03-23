@@ -1,9 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Snackbar from 'react-toolbox/lib/snackbar/Snackbar';
-import {addNotification} from '../../actions/notificationActions';
+import { addNotification } from '../../actions/notificationActions';
 
 class Notification extends Component {
   render() {
