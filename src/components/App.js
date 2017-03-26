@@ -49,27 +49,34 @@ class App extends Component {
         >
           <MainMenu onLeftIconClick={ this.toggleDrawerActive }/>
         </NavDrawer>
-        <Panel style={{ paddingTop: '32px' }}>
+        <Panel style={{ padding: '62px 0' }}>
           <Header leftIcon="menu" onLeftIconClick={ this.toggleDrawerActive }/>
-          <div style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
-            <h1>Main Content</h1>
-            <p>Main content goes here.</p>
-            <Grid fluid>
-              <Row>
-                {[0, 1, 2, 3].map((index) => {
-                  return (
-                    <Col xs={6} md={3} key={index}>
-                      <Spaces index={index}/>
-                    </Col>
-                  );
-                })}
-              </Row>
-            </Grid>
-            <hr/>
-            <Checkbox label="Pin Main Menu" checked={this.state.mainMenuPinned} onChange={this.toggleMainMenuPinned}/>
-            <Checkbox label="Show activity sidebar" checked={this.state.activitySideBarPinned}
-                      onChange={this.toggleActivitySidebar}/>
-          </div>
+          <Grid fluid>
+            <Row center="xs">
+              <Col lg={8} md={10} xs={12}>
+                <Row start="xs">
+                  <Col>
+                    <h1>Main Content</h1>
+                    <p>Main content goes here.</p>
+                  </Col>
+                </Row>
+                    <Row start="xs">
+                      {[0, 1, 2, 3].map((index) => {
+                        return (
+                          <Col xs={6} md={4} lg={3} key={index}>
+                            <Spaces index={index}/>
+                          </Col>
+                        );
+                      })}
+                    </Row>
+                <Row start="xs">
+                  <Checkbox label="Pin Main Menu" checked={this.state.mainMenuPinned} onChange={this.toggleMainMenuPinned}/>
+                  <Checkbox label="Show activity sidebar" checked={this.state.activitySideBarPinned}
+                            onChange={this.toggleActivitySidebar}/>
+                </Row>
+            </Col>
+          </Row>
+        </Grid>
         </Panel>
         <Sidebar pinned={ this.state.activitySideBarPinned } width={ 5 }>
           <div><IconButton icon="close" onClick={ this.toggleActivitySidebar }/></div>
