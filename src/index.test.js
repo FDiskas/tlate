@@ -32,7 +32,7 @@ describe('index.js', () => {
     );
   });
 
-  it('firebase SDK version should be 3.7.1', () => {
-    expect(firebase.SDK_VERSION).toBe('3.7.1');
+  it('firebase SDK version should be 3.7.5', () => {
+    expect(firebase.SDK_VERSION).toBe('3.7.5');
   });
 });

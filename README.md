@@ -12,6 +12,10 @@
   To create new component type `rcls` then press `TAB`
 * [Unsplash](https://unsplash.it/images) Dummy Images [how to](http://designinstruct.com/tutorial/howto-image-placeholders/)
 
+## Installation
+1. `yarn`
+1. `yarn start`
+
 ## TODO
 * [ ] Check for new react-toolbox release with a fix [pull request](https://github.com/react-toolbox/react-toolbox/pull/1321)
 * [ ] Demo database structure
