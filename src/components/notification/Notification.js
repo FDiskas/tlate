@@ -21,9 +21,6 @@ class Notification extends Component {
   }
 }
 
-Notification.propTypes = {};
-Notification.defaultProps = {};
-
 function mapStateToProps(state) {
   return {
     notification: state.notification
