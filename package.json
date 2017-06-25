@@ -51,5 +51,9 @@
       "color-primary-dark": "#607D8B"
     },
     "output": "src/assets/toolbox"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=5"
   }
 }
