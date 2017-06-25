@@ -1,20 +1,15 @@
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
-
-import theme from './../../toolbox/theme';
-import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+import { shallow } from 'enzyme';
 import Header from './Header';
 
 // TODO: check if it's working correctly. First version should work. check history
 it('Check Header snapshot', () => {
 
-  const renderer = ReactTestUtils.createRenderer();
-  renderer.render(
-      <ThemeProvider theme={theme}>
+  // const renderer = ReactTestUtils.createRenderer();
+  const result = shallow(
         <Header leftIcon="menu" />
-      </ThemeProvider>
   );
-  const result = renderer.getRenderOutput();
+  // const result = renderer.getRenderOutput();
 
-  expect(result.type).toBe(Header);
+  expect(result.find('.App-header').length).toBe(1);
 });

@@ -36,7 +36,4 @@ class Spaces extends Component {
   }
 }
 
-Spaces.propTypes = {};
-Spaces.defaultProps = {};
-
 export default Spaces;

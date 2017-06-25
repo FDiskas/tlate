@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-import './../toolbox/theme.css';
 import './App.css';
 
 import IconButton from 'react-toolbox/lib/button/IconButton';
