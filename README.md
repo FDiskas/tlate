@@ -6,7 +6,6 @@
 * [React Toolbox](http://react-toolbox.com)
 * [React Flexbox Grid](https://github.com/roylee0704/react-flexbox-grid) React components that implement [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid)
 * [Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) UI Icons
-* [yarn](https://yarnpkg.com) Package manager
 * [jest](https://facebook.github.io/jest/) For tests
 * [ReactJS Live templates for JetBrains](https://github.com/geochatz/phpstorm-reactjs)
   To create new component type `rcls` then press `TAB`
