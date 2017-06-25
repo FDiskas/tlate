@@ -1,24 +1,25 @@
-import React, {Component, PropTypes} from "react";
-import List from "react-toolbox/lib/list/List";
-import ListDivider from "react-toolbox/lib/list/ListDivider";
-import ListItem from "react-toolbox/lib/list/ListItem";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
+import Menu from 'react-toolbox/lib/menu/Menu';
+import MenuItem from 'react-toolbox/lib/menu/MenuItem';
+import MenuDivider from 'react-toolbox/lib/menu/MenuDivider';
 
 class MainMenu extends Component {
   render() {
     return (
-      <List selectable ripple>
-        <ListItem caption="Late" rightIcon="arrow_back" onClick={this.props.onLeftIconClick} />
-        <ListDivider />
-        <ListItem caption="Spaces" leftIcon="view_module" />
-        <ListItem caption="Search" leftIcon="search" disabled={true} />
-        <ListItem caption="Settings" leftIcon="settings" disabled={true} />
-        <ListDivider />
-        <ListItem caption="App Downloads" leftIcon="devices" disabled={true} />
-        <ListDivider />
-        <ListItem caption="Help" leftIcon="help" />
-        <ListItem caption="Send feedback" leftIcon="announcement" />
-        <ListItem caption="About" leftIcon="info" />
-      </List>
+      <Menu >
+        <MenuItem caption="Late" icon="arrow_back" onClick={this.props.onLeftIconClick} />
+        <MenuDivider />
+        <MenuItem caption="Spaces" icon="view_module" />
+        <MenuItem caption="Search" icon="search" disabled={true} />
+        <MenuItem caption="Settings" icon="settings" disabled={true} />
+        <MenuDivider />
+        <MenuItem caption="App Downloads" icon="devices" disabled={true} />
+        <MenuDivider />
+        <MenuItem caption="Help" icon="help" />
+        <MenuItem caption="Send feedback" icon="announcement" />
+        <MenuItem caption="About" icon="info" />
+      </Menu>
     );
   }
 }

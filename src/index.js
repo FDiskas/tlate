@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import registerServiceWorker from './registerServiceWorker';
 
-import './toolbox/theme.css';
-import theme from './toolbox/theme';
+import './assets/toolbox/theme.css';
+import theme from './assets/toolbox/theme';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 
 import App from './components/App';
@@ -29,3 +30,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+registerServiceWorker();

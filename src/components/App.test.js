@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App';
-import { shallow } from 'enzyme';
+import shallow from 'react-test-renderer/shallow';
 
 describe('<App />', () => {
   it('contains 1 <Header /> component', () => {

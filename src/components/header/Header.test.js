@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 
-import theme from './../../toolbox/theme';
+import theme from './../../assets/toolbox/theme';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import Header from './Header';
 
