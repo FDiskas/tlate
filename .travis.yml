@@ -5,6 +5,9 @@ node_js:
 cache:
   yarn: true
 
+before_install:
+  - npm install -g npm@latest
+
 before_deploy:
   - yarn run build
 
