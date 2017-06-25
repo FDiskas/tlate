@@ -175,7 +175,4 @@ class UserMenu extends Component {
   }
 }
 
-UserMenu.propTypes = {};
-UserMenu.defaultProps = {};
-
 export default UserMenu;

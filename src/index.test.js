@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './toolbox/theme.css';
-import theme from './toolbox/theme';
+import './assets/toolbox/theme.css';
+import theme from './assets/toolbox/theme';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 
 import App from './components/App';
@@ -32,7 +32,7 @@ describe('index.js', () => {
     );
   });
 
-  it('firebase SDK version should be 3.7.1', () => {
-    expect(firebase.SDK_VERSION).toBe('3.7.1');
+  it('firebase SDK version should be 4.1.3', () => {
+    expect(firebase.SDK_VERSION).toBe('4.1.3');
   });
 });
