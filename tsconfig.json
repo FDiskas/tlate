@@ -1,0 +1,31 @@
+{
+    "version": "2.1.4",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "baseUrl": "./src",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "allowJs": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "outDir": "./dist/",
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "typeRoots": [
+            "./node_modules/json-d-ts",
+            "./node_modules/@types"
+        ],
+        "lib": ["es2015", "es6", "dom"]
+    },
+    "exclude": [
+        "**/*.test.tsx",
+        "node_modules"
+    ],
+    "include": [
+        "./src/**/*"
+    ]
+}

@@ -10,13 +10,14 @@
 * [ReactJS Live templates for JetBrains](https://github.com/geochatz/phpstorm-reactjs)
   To create new component type `rcls` then press `TAB`
 * [Unsplash](https://unsplash.it/images) Dummy Images [how to](http://designinstruct.com/tutorial/howto-image-placeholders/)
+* [Ant Design](https://ant.design)
 
 ## Installation
 1. `yarn`
 1. `yarn start`
 
 ## TODO
-* [ ] Check for new react-toolbox release with a fix [pull request](https://github.com/react-toolbox/react-toolbox/pull/1321)
+* [ ] Main layout and mocks
 * [ ] Demo database structure
 * [ ] CSS regression tests
 * [ ] Add reminders to spaces
