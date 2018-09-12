@@ -1,0 +1,20 @@
+{
+  // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+  "editor.formatOnSave": true,
+  // Enable/disable JavaScript validation. (For Flow)
+  "javascript.validate.enable": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.suggestionActions.enabled": true,
+  // Enable/disable default JavaScript formatter (For Prettier)
+  "javascript.format.enable": false,
+  "files.autoSave": "onFocusChange",
+  "editor.fontLigatures": true,
+  "flow.useNPMPackagedFlow": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "jest.pathToJest": "yarn test",
+  "jest.restartJestOnSnapshotUpdate": true
+}

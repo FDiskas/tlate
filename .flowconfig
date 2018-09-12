@@ -1,0 +1,22 @@
+[ignore]
+.*/node_modules/bower/.*
+.*/node_modules/config-chain/.*
+
+[include]
+
+[libs]
+.*/flow-typed/*
+
+[lints]
+
+[options]
+module.name_mapper='.*\.s?css$' -> 'css-module-flow'
+module.file_ext=.scss
+module.name_mapper.extension='scss' -> 'empty/object'
+module.name_mapper='^/src/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
+include_warnings=true
+
+[strict]
+
+[version]
+^0.80.0

@@ -1,60 +1,113 @@
 {
-  "name": "tlate",
-  "version": "0.0.5",
-  "private": true,
-  "description": "It's never to late - keep all your notes and memory privately in one place",
-  "homepage": "https://tlate.com",
+  "name": "useful-useless",
+  "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "coverage": "react-scripts test --env=jsdom --coverage",
-    "toolbox": "react-toolbox-themr"
+    "start": "concurrently npm:start:*",
+    "start:dev": "rimraf .cache dist && parcel src/index.html --open",
+    "start:server": "json-server config/data.json --port 4321 --watch",
+    "build": "rimraf dist && parcel build src/index.html --no-cache --no-source-maps --detailed-report",
+    "prebuild:start": "yarn build",
+    "build:start": "serve -s -o -C -n dist",
+    "precommit": "lint-staged",
+    "postinstall": "flow-typed install",
+    "test": "jest"
   },
+  "lint-staged": {
+    "src/**/*.jsx": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax scss",
+      "git add"
+    ]
+  },
+  "license": "MIT",
   "dependencies": {
-    "firebase": "^4.1.3",
-    "material-design-icons": "^3.0.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-flexbox-grid": "^1.1.3",
-    "react-redux": "^5.0.5",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
-    "react-router-redux": "^4.0.8",
-    "react-style-proptype": "^3.0.0",
-    "react-tap-event-plugin": "^2.0.1",
-    "react-test-renderer": "^15.6.1",
-    "react-toolbox": "2.0.0-beta.6",
-    "redux": "^3.7.0",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "classnames": "^2.2.6",
+    "components": "^0.1.0",
+    "containers": "0.0.1",
+    "font-awesome": "^4.7.0",
+    "layouts": "^3.0.1",
+    "mocks": "0.0.15",
+    "pages": "0.0.16",
+    "postcss-modules": "^1.1.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.5.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.0.0",
+    "react-router4-with-layouts": "^1.2.8",
+    "root": "^3.2.0",
+    "services": "0.0.3"
   },
   "devDependencies": {
-    "enzyme": "^2.9.1",
-    "react-addons-test-utils": "^15.6.0",
-    "react-scripts": "1.0.7",
-    "react-toolbox-themr": "^1.0.2"
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-flow-react-proptypes": "^24.1.2",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^4.0.1",
+    "css-module-flow": "^1.0.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-alias": "^1.1.1",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.80.0",
+    "flow-typed": "^2.5.1",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "jest-css-modules": "^1.1.0",
+    "jest-enzyme": "^6.0.4",
+    "json-server": "^0.14.0",
+    "lint-staged": "^7.2.0",
+    "local-storage-mock": "^1.0.2",
+    "module-alias": "^2.1.0",
+    "node-sass": "^4.9.2",
+    "parcel": "^1.9.4",
+    "postcss-modules": "^1.1.0",
+    "prettier-eslint": "^8.8.2",
+    "rimraf": "^2.6.2",
+    "serve": "6.5.8",
+    "stylelint": "^9.3.0",
+    "stylelint-config-recommended": "^2.1.0"
+  },
+  "browser": {
+    "@": "./src"
   },
   "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 50,
-        "lines": 33,
-        "statements": 25
-      }
-    }
-  },
-  "reactToolbox": {
-    "customProperties": {
-      "color-primary-dark": "#607D8B"
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(css|scss|less|sass)$": "jest-css-modules"
     },
-    "output": "src/assets/toolbox"
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest.setup.js"
   },
   "engines": {
-    "node": ">=6",
+    "node": ">=8",
     "npm": ">=5"
   }
 }
