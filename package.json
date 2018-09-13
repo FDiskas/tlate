@@ -84,9 +84,6 @@
     "stylelint": "^9.3.0",
     "stylelint-config-recommended": "^2.1.0"
   },
-  "browser": {
-    "@": "./src"
-  },
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest",

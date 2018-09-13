@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-import { NumberTools } from '../../services/Utils/NumberTools';
+import { NumberTools } from '/src/services/Utils/NumberTools';
 
 export const UseCase = () => (
   <article className="media">

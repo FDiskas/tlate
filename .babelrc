@@ -7,7 +7,7 @@
         "alias": {
           "^/src/(.+)": "./src/\\1"
         },
-        "extensions": [".js", ".jsx", ".json", ".scss", ".sass"]
+        "extensions": [".js", ".jsx"]
       }
     ],
     ["transform-object-rest-spread", { "useBuiltIns": true }],
