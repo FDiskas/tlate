@@ -1,8 +1,8 @@
 // @flow
 
 import * as React from 'react';
-import { ItemForm } from '../components/ItemForm/ItemForm';
-import { Item } from '../components/Item/Item';
+import { ItemForm } from '/src/components/ItemForm/ItemForm';
+import { Item } from '/src/components/Item/Item';
 
 type State = {
   title?: string,

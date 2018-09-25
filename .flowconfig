@@ -20,6 +20,3 @@ module.name_mapper='.*\.sass$' -> 'empty/object'
 include_warnings=true
 
 [strict]
-
-[version]
-^0.80.0

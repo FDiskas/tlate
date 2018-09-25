@@ -27,6 +27,7 @@
     "prettier/prettier": "error",
     "react/display-name": [0],
     "import/prefer-default-export": 0,
+    "flowtype/no-types-missing-file-annotation": 0,
     "react/prop-types": 0,
     "react/no-unused-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { shallow } from 'enzyme/build';
 import { Item } from './Item';
 
 describe('example', () => {

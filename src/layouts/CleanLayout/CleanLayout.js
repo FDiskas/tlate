@@ -41,7 +41,7 @@ export class CleanLayout extends React.Component<Props, State> {
 
     return (
       <React.Fragment>
-        <nav className="navbar is-fixed-top">
+        <nav className="navbar is-fixed-top is-black">
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
@@ -67,6 +67,9 @@ export class CleanLayout extends React.Component<Props, State> {
                 </a>
               </div>
               <div className="navbar-end">
+                <div className="navbar-item">
+                  <input className="input is-rounded" type="text" placeholder="Search" />
+                </div>
                 <a className="navbar-item" href="/">
                   Profile
                 </a>

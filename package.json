@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently npm:start:*",
-    "start:dev": "rimraf .cache dist && parcel public/index.html --open",
+    "start:dev": "rimraf .cache dist && parcel public/index.html --no-autoinstall --open",
     "start:server": "json-server config/data.json --port 4321 --watch",
     "build": "rimraf dist && parcel build public/index.html --no-cache --no-source-maps --detailed-report",
     "prebuild:start": "yarn build",
     "build:start": "serve -s -o -C -n dist",
     "precommit": "lint-staged",
     "postinstall": "flow-typed install",
-    "test": "jest"
+    "test": "jest",
+    "flow": "flow"
   },
   "lint-staged": {
     "src/**/*.jsx": [
@@ -28,10 +29,10 @@
     "bulma": "^0.7.1",
     "classnames": "^2.2.6",
     "font-awesome": "^4.7.0",
-    "postcss-modules": "^1.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.5.0",
+    "react-hot-loader": "^4.3.8",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.0.0",
     "react-router4-with-layouts": "^1.2.8"
@@ -76,6 +77,7 @@
     "module-alias": "^2.1.0",
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.7",
+    "parcel-plugin-imagemin": "^2.1.1",
     "parcel-plugin-json": "^1.0.1",
     "postcss-modules": "^1.1.0",
     "prettier-eslint": "^8.8.2",

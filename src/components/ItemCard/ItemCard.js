@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import type { ItemType } from '../ItemList/ItemList';
+import type { ItemType } from '/src/components/ItemList/ItemList';
 import styles from './ItemCard.scss';
 
 interface ItemCardProps {

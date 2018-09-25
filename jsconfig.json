@@ -2,7 +2,7 @@
   // This file is required for VSCode to understand aliases
   "compilerOptions": {
     // This must be specified if "paths" is set
-    "baseUrl": "./src",
+    "baseUrl": ".",
     // Relative to "baseUrl"
     "paths": {
       "/src": ["./src"]

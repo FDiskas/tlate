@@ -2,10 +2,10 @@
 
 import * as React from 'react';
 
-import { UseCase } from '../UseCase/UseCase';
-import { UseCaseForm } from '../UseCaseForm/UseCaseForm';
-import type { ItemType } from '../ItemList/ItemList';
-import { WindowTools } from '../../services/Utils/WindowTools';
+import { UseCase } from '/src/components/UseCase/UseCase';
+import { UseCaseForm } from '/src/components/UseCaseForm/UseCaseForm';
+import { WindowTools } from '/src/services/Utils/WindowTools';
+import type { ItemType } from '/src/components/ItemList/ItemList';
 
 import styles from './Item.scss';
 import './Cover.scss';

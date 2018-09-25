@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import { connect } from '/src/root/connect';
-import { ItemCard } from '/src/components/ItemCard/ItemCard';
+import { ItemCard } from '../ItemCard/ItemCard';
 
 export type ItemType = {
   id: string,

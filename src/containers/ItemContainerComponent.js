@@ -3,9 +3,9 @@
 import * as React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { connect } from '../root/connect';
-import { Item } from '../components/Item/Item';
-import type { ItemType } from '../components/ItemList/ItemList';
+import { connect } from '/src/root/connect';
+import { Item } from '/src/components/Item/Item';
+import type { ItemType } from '/src/components/ItemList/ItemList';
 
 type Props = {
   item: ItemType,
