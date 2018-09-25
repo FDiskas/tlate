@@ -1,33 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
+/* eslint-disable */
+// @flow
 
-import './assets/toolbox/theme.css';
-import theme from './assets/toolbox/theme';
-import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+import * as React from 'react';
+import { render } from 'react-dom';
 
-import App from './components/App';
-import './assets/styles/index.css';
-import '../node_modules/material-design-icons/iconfont/material-icons.css';
+// import * as App from '/src/root/App';
 
-import * as firebase from "firebase";
+const root = document.getElementById('app') || document.createElement('div');
+function renderApp() {
+  const App = require('/src/root/App').default;
+  render(<App />, root);
+}
 
-import { Provider } from 'react-redux';
-import Store from './store';
+renderApp();
 
-import { config as fireBaseConf } from './constants/FireBase';
-
-firebase.initializeApp(fireBaseConf);
-
-// TODO: do we need set this to global?
-window.firebase = firebase;
-
-ReactDOM.render(
-  <Provider store={Store} >
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </Provider>,
-  document.getElementById('root')
-);
-registerServiceWorker();
+if (module.hot) {
+  module.hot.accept('/src/root/App');
+}
