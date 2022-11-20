@@ -1,0 +1,12 @@
+*.html
+*.css
+*.scss
+*.json
+*.snap
+*.png
+*.jpg
+*.svg
+*.test.js
+config/jest.setup.js
+wallaby.js
+node_modules/
