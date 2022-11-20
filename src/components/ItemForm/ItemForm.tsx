@@ -1,7 +1,5 @@
 // @flow
-
-import * as React from 'react';
-
+import * as React from "react";
 export const ItemForm = ({ handleChange }: { handleChange: Function }) => (
   <div>
     <div className="field">

@@ -1,9 +1,6 @@
-// @flow
-
-import * as React from 'react';
-
+import * as React from "react";
 type Props = {
-  children: ?React.Node,
+  children?: React.ReactNode,
 };
 export const LandingLayout = ({ children }: Props) => (
   <React.Fragment>

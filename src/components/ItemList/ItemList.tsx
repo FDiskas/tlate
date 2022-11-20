@@ -1,10 +1,7 @@
 // @flow
-
-import * as React from 'react';
-
-import { connect } from '/src/root/connect';
-import { ItemCard } from '../ItemCard/ItemCard';
-
+import * as React from "react";
+import { connect } from "/src/root/connect";
+import { ItemCard } from "../ItemCard/ItemCard";
 export type ItemType = {
   id: string,
   title: string,
@@ -13,21 +10,18 @@ export type ItemType = {
   image: string,
   useCases?: string[],
 };
-
 export interface ItemListProps {
   items: ItemType[];
 }
-
-export class ItemListComponent extends React.Component<ItemListProps, {}> {
+export class ItemListComponent extends React.Component<{}, {}> {
   render() {
     const { items } = this.props;
     if (!items) {
       return false;
     }
-
     return (
       <div className="columns is-multiline">
-        {items.map(item => (
+        {items.map((item) => (
           <div key={`item${item.id}`} className="column is-one-third">
             <ItemCard item={item} />
           </div>
@@ -36,12 +30,8 @@ export class ItemListComponent extends React.Component<ItemListProps, {}> {
     );
   }
 }
-
-export const ItemList = connect(
-  ItemListComponent,
-  {
-    items: {
-      source: '/items',
-    },
+export const ItemList = connect(ItemListComponent, {
+  items: {
+    source: "/items",
   },
-);
+});

@@ -1,18 +1,21 @@
-// @flow
-
-import * as React from 'react';
-import httpService from '/src/services/Http/HttpService';
-
+import * as React from "react";
+import httpService from "../services/Http/HttpService";
 export function connect(Component: React.ComponentType<any>, mappedProps: {}) {
-  return class extends React.Component<{}, { [key: string]: {} }> {
+  return class extends React.Component<
+    {},
+    {
+      [key: string]: {},
+    }
+  > {
     componentWillMount() {
-      Object.keys(mappedProps).forEach(key => {
+      Object.keys(mappedProps).forEach((key) => {
         const source =
-          mappedProps[key].source instanceof Function ? mappedProps[key].source(this.props) : mappedProps[key].source;
-
+          mappedProps[key].source instanceof Function
+            ? mappedProps[key].source(this.props)
+            : mappedProps[key].source;
         httpService
           .get(source)
-          .then(result => {
+          .then((result) => {
             this.setState({
               [key]: result,
             });
@@ -24,7 +27,6 @@ export function connect(Component: React.ComponentType<any>, mappedProps: {}) {
           });
       });
     }
-
     render() {
       return <Component {...this.state} {...this.props} />;
     }

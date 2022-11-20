@@ -1,19 +1,15 @@
 // @flow
-
-import { hot } from 'react-hot-loader';
 import * as React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Route } from 'react-router4-with-layouts';
-
-import { LandingLayout } from '/src/layouts/Landing/LandingLayout';
-import { CleanLayout } from '/src/layouts/CleanLayout/CleanLayout';
-import { LandingPage } from '/src/pages/Landing/LandingPage';
-import { ItemPage } from '/src/pages/Item/ItemPage';
-import { ItemCreatePage } from '/src/pages/ItemCreate/ItemCreatePage';
-import { NotFoundPage } from '/src/pages/NotFound/NotFoundPage';
-
 import 'bulma';
 import 'font-awesome/scss/font-awesome.scss';
+import { LandingLayout } from '../layouts/Landing/LandingLayout';
+import { CleanLayout } from '../layouts/CleanLayout/CleanLayout';
+import { ItemPage } from '../pages/Item/ItemPage';
+import { ItemCreatePage } from '../pages/ItemCreate/ItemCreatePage';
+import { LandingPage } from '../pages/Landing/LandingPage';
+import { NotFoundPage } from '../pages/NotFound/NotFoundPage';
 
 export const App = () => (
   <Router>
@@ -27,5 +23,3 @@ export const App = () => (
     </React.Fragment>
   </Router>
 );
-
-export default hot(module)(App);

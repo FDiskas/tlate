@@ -1,44 +1,39 @@
-// @flow
-
-import * as React from 'react';
-import classNames from 'classnames';
-
-import styles from './CleanLayout.scss';
-import logo from './assets/logo_placeholder.png';
-
+import * as React from "react";
+import classNames from "classnames";
+import styles from "./CleanLayout.scss";
+import logo from "./assets/logo_placeholder.png";
 type Props = {
-  children: ?React.Node,
+  children?: React.ReactNode,
 };
 type State = {
   isActive: boolean,
 };
-
-export class CleanLayout extends React.Component<Props, State> {
+type CleanLayoutState = {
+  isActive: boolean,
+};
+export class CleanLayout extends React.Component<{}, CleanLayoutState> {
   state = {
     isActive: false,
   };
-
-  handleClick = (e: MouseEvent) => {
+  handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isActive: !prevState.isActive,
     }));
   };
-
   render() {
     const { isActive } = this.state;
     const { children } = this.props;
     const navBarClass = classNames({
-      'navbar-menu': true,
-      'is-active': isActive,
+      "navbar-menu": true,
+      "is-active": isActive,
     });
     const navBurgerClass = classNames({
-      'navbar-burger': true,
-      'is-active': isActive,
+      "navbar-burger": true,
+      "is-active": isActive,
       [styles.burger]: true,
     });
-
     return (
       <React.Fragment>
         <nav className="navbar is-fixed-top is-black">
@@ -47,7 +42,12 @@ export class CleanLayout extends React.Component<Props, State> {
               <a className="navbar-item" href="/">
                 <img src={logo} alt="Useful-useless" />
               </a>
-              <a href="/" className={navBurgerClass} aria-expanded="false" onClick={this.handleClick}>
+              <a
+                href="/"
+                className={navBurgerClass}
+                aria-expanded="false"
+                onClick={this.handleClick}
+              >
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
@@ -68,7 +68,11 @@ export class CleanLayout extends React.Component<Props, State> {
               </div>
               <div className="navbar-end">
                 <div className="navbar-item">
-                  <input className="input is-rounded" type="text" placeholder="Search" />
+                  <input
+                    className="input is-rounded"
+                    type="text"
+                    placeholder="Search"
+                  />
                 </div>
                 <a className="navbar-item" href="/">
                   Profile

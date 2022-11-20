@@ -2,13 +2,12 @@
 
 import * as React from 'react';
 
-import { UseCase } from '/src/components/UseCase/UseCase';
-import { UseCaseForm } from '/src/components/UseCaseForm/UseCaseForm';
-import { WindowTools } from '/src/services/Utils/WindowTools';
-import type { ItemType } from '/src/components/ItemList/ItemList';
-
 import styles from './Item.scss';
 import './Cover.scss';
+import { WindowTools } from '../../services/Utils/WindowTools';
+import { ItemType } from '../ItemList/ItemList';
+import { UseCase } from '../UseCase/UseCase';
+import { UseCaseForm } from '../UseCaseForm/UseCaseForm';
 
 type ItemProps = {
   item: ItemType,
@@ -28,7 +27,7 @@ export class Item extends React.Component<ItemProps, {}> {
   }
 
   componentWillUnmount() {
-    WindowTools.setBodyImage(null);
+    WindowTools.setBodyImage(undefined);
   }
 
   render() {
